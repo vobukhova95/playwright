@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const { email, pass, generateRandomPassword } = require("../user");
+const { email, pass, generateRandomPassword } = require('../user');
 
 test('Successful authorization on the website', async ({ page }) => {
 	await page.goto('https://netology.ru/?modal=sign_in');
@@ -16,8 +16,8 @@ test('Successful authorization on the website', async ({ page }) => {
     await page.getByTestId('login-submit-btn').click();
 	await page.screenshot({ path: 'screenshots/successfulprofilepage.png', fullPage: true });
 
-    await expect(page).toHaveURL("https://netology.ru/profile");
-	await expect(page.locator("h2")).toContainText("Мое обучение");
+    await expect(page).toHaveURL('https://netology.ru/profile');
+	await expect(page.locator('h2')).toContainText('Мое обучение');
 });
 
 test('Unsuccessful authorization on the website', async ({ page }) => {
