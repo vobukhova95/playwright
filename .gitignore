@@ -1,0 +1,23 @@
+package-lock.json
+user.js
+screenshots/
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.github/
+
+# Local History for Visual Studio Code
+.history/
+
+# Playwright
+example.spec.ts
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
