@@ -9,10 +9,10 @@ test('Successful authorization on the website', async ({ page }) => {
 	await page.screenshot({ path: 'screenshots/successfulauthpage.png', fullPage: true });
 	await page.getByRole('textbox', { name: 'Email' }).click();
 	await page.getByRole('textbox', { name: 'Email' }).fill(email);
-	await page.screenshot({ path: 'screenshots/successfulfillemail.png', fullPage: true });
+	await page.screenshot({ path: 'screenshots/successfulfillemail.png' });
 	await page.getByRole('textbox', { name: 'Пароль' }).click();
 	await page.getByRole('textbox', { name: 'Пароль' }).fill(pass);
-	await page.screenshot({ path: 'screenshots/successfulfullpass.png', fullPage: true });
+	await page.screenshot({ path: 'screenshots/successfulfullpass.png' });
     await page.getByTestId('login-submit-btn').click();
 	await page.screenshot({ path: 'screenshots/successfulprofilepage.png', fullPage: true });
 
@@ -29,10 +29,10 @@ test('Unsuccessful authorization on the website', async ({ page }) => {
 	await page.screenshot({ path: 'screenshots/unsuccessfulauthpage.png', fullPage: true });
 	await page.getByRole('textbox', { name: 'Email' }).click();
 	await page.getByRole('textbox', { name: 'Email' }).fill(email);
-	await page.screenshot({ path: 'screenshots/unsuccessfulfillemail.png', fullPage: true });
+	await page.screenshot({ path: 'screenshots/unsuccessfulfillemail.png' });
 	await page.getByRole('textbox', { name: 'Пароль' }).click();
 	await page.getByRole('textbox', { name: 'Пароль' }).fill(randomPassword);
-	await page.screenshot({ path: 'screenshots/unsuccessfulfullpass.png', fullPage: true });
+	await page.screenshot({ path: 'screenshots/unsuccessfulfullpass.png' });
     await page.getByTestId('login-submit-btn').click();
 	await page.screenshot({ path: 'screenshots/errorpage.png', fullPage: true });
     
